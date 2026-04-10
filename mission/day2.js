@@ -4,10 +4,29 @@ function checkAdult(age) {
   if (typeof age !== "number") {
     return console.log("숫자만 입력해주세요.");
   }
-  if (age >= 18) {
-    return console.log("성인입니다.");
+  switch (age) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+    case 8:
+    case 9:
+    case 10:
+    case 11:
+    case 12:
+    case 13:
+    case 14:
+    case 15:
+    case 16:
+    case 17:
+      return console.log("미성년자입니다.");
+    default:
+      return console.log("성인입니다.");
   }
-  return console.log("미성년자입니다.");
 }
 
 checkAdult(20); // 성인입니다.
